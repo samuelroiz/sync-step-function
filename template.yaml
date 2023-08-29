@@ -72,7 +72,7 @@ Resources:
     Properties:
       CodeUri: ./makePaymentFunction
       Handler: payment.handler
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref OrdersTable
@@ -85,7 +85,7 @@ Resources:
     Properties:
       CodeUri: ./makeOrderFunction
       Handler: order.handler
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref OrdersTable
@@ -98,7 +98,7 @@ Resources:
     Properties:
       CodeUri: ./orderFailureFunction
       Handler: orderFailure.handler
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref OrdersTable
